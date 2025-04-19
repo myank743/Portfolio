@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Stayfaree</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+  background-color: #111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.brand {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #222;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive - Dropdown on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+    .hero {
+      background-image: url('back.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .login-link {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      color: #ffffff;
+    }
+
+    .tripadvisor {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tripadvisor .dots {
+      color: green;
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+
+    .tripadvisor img {
+      height: 24px;
+    }
+
+    .form-box {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .form-box h2 {
+      color: #d0d0ff;
+      margin-bottom: 10px;
+    }
+
+    .location-input {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      width: 300px;
+      margin-right: 10px;
+    }
+
+    .get-started {
+      padding: 12px 20px;
+      background-color: #ff7700;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+                               
+    .features-section {
+  background: linear-gradient(to right, #fefefe, #e5edf5);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #000c57;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  filter: hue-rotate(210deg);
+}
+
+.feature h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #2d2d2d;
+  line-height: 1.5;
+}
+
+
+  </style>
+</head>
+
+<body>
+                   
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">LOGO</div>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Listings</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    
+  </script>
+
+  <div class="hero">
+    <a class="login-link" href="#">Log In</a>
+    <h1>Hire a car and driver</h1>
+    <p>in Mumbai and across India</p>
+
+    <div class="tripadvisor">
+      <span class="dots">●●●◐○</span>
+      <img src="" alt="TripAdvisor">
+    </div>
+
+    <div class="form-box">
+      <h2>Where should we pick you up?</h2>
+      <input class="location-input" type="text" placeholder="Mumbai, Maharashtra, India" />
+      <button class="get-started">Get Started</button>
+    </div>
+  </div>
+
+
+  <section class="features-section">
+    <h2>What makes us different</h2>
+    <div class="features-grid">
+      
+      <div class="feature">
+        <img src="#" alt="Book with confidence" />
+        <h3>Book with confidence</h3>
+        <p>Quotes are instant and reserved online. Cancellations up to 24 hours before pickup are refunded in full.</p>
+      </div>
+      
+      <div class="feature">
+        <img src="#" alt="Stay in control" />
+        <h3>Stay in control</h3>
+        <p>Our drivers are vaccinated and professional. Our operations team is on call over Whatsapp or phone.</p>
+      </div>
+      
+      <div class="feature">
+        <img src="#" alt="Travel in comfort" />
+        <h3>Travel in comfort</h3>
+        <p>Every vehicle is air-conditioned. We arrange 4G mobile hotspots, child safety seats, and local tour guides upon request.</p>
+      </div>
+  
+    </div>
+  </section>
+
+  
+</body>
+</html>
